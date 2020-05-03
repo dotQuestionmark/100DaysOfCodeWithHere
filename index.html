@@ -12,7 +12,18 @@
 <script>
     var platform = new H.service.Platform({
   'apikey': '3B668PNbGOTNMmGbjRa56pBMmq6LknTHM0tGfX1TiS0'
+ 
+
 });
+var position = {lat:29.00759,  lon:77.75963};
+var defaultLayers = platform.createDefaultLayers();
+var map = new H.Map(
+    document.getElementById('mapContainer'),
+    defaultLayers.vector.normal.map,
+    {
+      zoom: 10,
+      center:  position 
+    });
 </script>
 </html>
 
